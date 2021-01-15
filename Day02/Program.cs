@@ -30,6 +30,7 @@ namespace Day02
             // Reference type variables store a REFERNCE to the value.  Reference types store data on the heap.
             // Hint - Think of a variable as a box or container. WHATS IN THE BOOOOOX?!?!
 
+            // Three ways to do the same thing
             number1 = number1 + 1; // number1++; // number1 += 1;
 
             // Implicit Casting
@@ -137,8 +138,24 @@ namespace Day02
 
             // For loop
             for (int i = 0; i < 5; i++)
+            { 
+                string output = "Your number is " + i;
+                Console.WriteLine(output);
+            }
+            
+            // For loop in reverse
+            for (int i = 5; i > 0; i--)
             {
                 Console.WriteLine(i);
+            }
+
+            // string manipulation
+            for (int i = 0; i < 5; i++)
+            {
+                //string output = "Your number is " + i;
+                //string output = string.Format("Your number is {0}", i);
+                string output = $"Your number is {i}"; // String interpolation is used the most frequently
+                Console.WriteLine(output);
             }
         }
     }
