@@ -26,6 +26,9 @@ namespace Day05
 
             var sum1 = Sum(5, 5, 5);
 
+            SayHelloKindly();
+            SayHelloKindly("Jason");
+
             //IsEmailAddress();
             //IsEmailAddress(23);
             //Sum("1", "4");
@@ -51,6 +54,11 @@ namespace Day05
         private static void SayHelloKindly(string person)
         {
             Console.WriteLine($"Hello {person} my good sire!");
+        }
+
+        private static void SayHelloKindly()
+        {
+            Console.WriteLine($"Hello there my good sire!");
         }
 
         private static int Sum(int num1, int num2)
