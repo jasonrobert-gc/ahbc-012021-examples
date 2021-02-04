@@ -6,16 +6,22 @@ namespace Exercise21
     {
         static void Main(string[] args)
         {
+            var words = FetchWords();
+            PrintOutput(words);
+        }
+
+        private static string[] FetchWords()
+        {
             var result = new string[1_000];
             var index = 0;
             do
             {
                 Console.Write("Enter a word:");
                 result[index] = Console.ReadLine();
-                index++;
+                index++; // index = index + 1;
             } while (PromptTryAgain());
 
-            PrintOutput(result);
+            return result;
         }
 
         private static void PrintOutput(string[] words)
