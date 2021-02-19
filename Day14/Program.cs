@@ -16,7 +16,7 @@ namespace Day14
             Console.WriteLine($"The area of your shape is: {shape.GetArea()}");
 
             // To prove it is a singleton
-            var shape2 = ShapeFactory.Instance.Create("square", 2);
+            var shape2 = ShapeFactory.Instance.Create("square", 4);
         }
     }
 }
