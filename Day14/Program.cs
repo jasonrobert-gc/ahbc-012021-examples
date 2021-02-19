@@ -17,6 +17,13 @@ namespace Day14
 
             // To prove it is a singleton
             var shape2 = ShapeFactory.Instance.Create("square", 4);
+
+            // 1. Create a new branch off of main       - git checkout -B new-branch
+            // 2. Make change and commit to new branch  - git add . / git commit -m "some message"
+            // 3. When finished, push branch to github  - git push --set-upstream origin new-branch
+            // 4. Create pull request from new branch   - Done from GitHub web application
+            // 5. Merge pull request into main          - Done from GitHub web application
+            // 6. Pull main merge commit locally        - git checkout main / git pull
         }
     }
 }
