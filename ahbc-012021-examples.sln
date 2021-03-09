@@ -43,9 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockAssessment2", "MockAsse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day14", "Day14\Day14.csproj", "{F26585F3-08EF-4C52-94DF-2F2274C7D1F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment2a", "Assessment2a\Assessment2a.csproj", "{3B55570C-D53F-4E99-A78E-5BEB159AEB5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assessment2a", "Assessment2a\Assessment2a.csproj", "{3B55570C-D53F-4E99-A78E-5BEB159AEB5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day15", "Day15\Day15.csproj", "{39C2ADEF-23B1-40DB-8238-1C3467E0B806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day15", "Day15\Day15.csproj", "{39C2ADEF-23B1-40DB-8238-1C3467E0B806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockAssessment3", "MockAssessment3\MockAssessment3.csproj", "{A0F2FDEB-8321-4CDC-A5AF-85450430E716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{39C2ADEF-23B1-40DB-8238-1C3467E0B806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C2ADEF-23B1-40DB-8238-1C3467E0B806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C2ADEF-23B1-40DB-8238-1C3467E0B806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F2FDEB-8321-4CDC-A5AF-85450430E716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F2FDEB-8321-4CDC-A5AF-85450430E716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F2FDEB-8321-4CDC-A5AF-85450430E716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F2FDEB-8321-4CDC-A5AF-85450430E716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

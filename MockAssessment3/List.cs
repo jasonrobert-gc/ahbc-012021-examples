@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Day15
+namespace MockAssessment3
 {
     public class List
     {
         private int _count = 0;
-        private readonly string[] _array;
+        private readonly Car[] _array;
 
         public List(int maxLength)
         {
-            _array = new string[maxLength];
+            _array = new Car[maxLength];
         }
 
         public int Count()
@@ -29,7 +29,7 @@ namespace Day15
             return _count == _array.Length;
         }
 
-        public bool Insert(string value)
+        public bool Insert(Car value)
         {
             if (IsFull())
             {
@@ -51,19 +51,20 @@ namespace Day15
             _count--;
         }
 
-        public string GetAt(int index)
+        public Car GetAt(int index)
         {
             return _array[index];
         }
 
-        public bool InsertAt(int index, object o)
+        public bool InsertAt(int index, Car o)
         {
             if (index > _count)
             {
                 return false;
             }
 
-            _array[index] = (string)o; // o.ToString();
+            _count++;
+            _array[index] = o; 
             return true;
         }
     }
