@@ -31,30 +31,19 @@ namespace Day17.Tests
             Assert.Equal(20, result);
         }
 
-        [Fact]
-        public void ConvertsToFahrenheit_100()
+        [Theory]
+        [InlineData(-40, -40)]
+        [InlineData(100, 212)]
+        public void ConvertsToFahrenheit(int source, int expected)
         {
             // Arrange
             var converter = new TemperatureConverter();
 
             // Act
-            var result = converter.Convert(100, "F");
+            var result = converter.Convert(source, "F");
 
             // Assert
-            Assert.Equal(212, result);
-        }
-
-        [Fact]
-        public void ConvertsToFahrenheit_40()
-        {
-            // Arrange
-            var converter = new TemperatureConverter();
-
-            // Act
-            var result = converter.Convert(-40, "F");
-
-            // Assert
-            Assert.Equal(-40, result);
+            Assert.Equal(expected, result);
         }
     }
 }
