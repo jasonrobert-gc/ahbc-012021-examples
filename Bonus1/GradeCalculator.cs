@@ -30,6 +30,7 @@ namespace Bonus1
             }
             else
             {
+                // nameof(numberGrade) == "numberGrade"
                 throw new ArgumentOutOfRangeException(nameof(numberGrade));
             }
         }
