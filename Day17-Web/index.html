@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 17</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
         <h1>Hello World </h1>
-        Home | <a href="about.html">About Me</a> | <a href="contact.html">Contact Us</a> | <a href="https://google.com">Google</a>
+        <nav>
+            <span class="emphasize">Home</span> | <a href="about.html">About Me</a> | <a href="contact.html">Contact Us</a> | <a href="https://google.com">Google</a>
+        </nav>
     </header>
     
     <main>
@@ -56,9 +59,22 @@
             <input type="password" name="password" id="password">
         </div>
         <div>
-            <button type="submit">Submit</button>
+            <label for="age">Age</label>
+            <input type="number" id="age">
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" id="date">
+        </div>
+        <div>
+            <label for="time">Time</label>
+            <input type="time" id="time">
+        </div>
+        <div>
+            <button id="submit" type="submit">Submit</button>
         </div>
     </footer>
-</body>
 
+    <script src="js/index.js"></script>
+</body>
 </html>
