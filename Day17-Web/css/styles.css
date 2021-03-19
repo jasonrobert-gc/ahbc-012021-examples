@@ -7,8 +7,16 @@ p {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.error {
+    color: red;
+    font-weight: bolder;
+}
+
 nav {
     background-color: burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .emphasize {
