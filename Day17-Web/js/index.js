@@ -35,3 +35,27 @@ let globalScopeBad = "hello world";
     // } while(userInput.length <= 2);
     
 })();
+
+
+// JQuery
+$('document').ready(() => {
+    const age = $('#age');
+    age.addClass('emphasize'); // age.attr('class', 'emphasize');
+    age.css({
+        'color': 'red'
+    });
+    
+    $('#submit').click(() => {
+        $('#submit').fadeOut(5000);
+    });
+
+    const inputs = $('input');
+    inputs.mouseenter(() => {
+        inputs.addClass('emphasize')
+              .fadeIn(1000);
+    });
+    inputs.mouseleave(() => {
+        inputs.removeClass('emphasize')
+              .fadeOut(5000);
+    });
+});
