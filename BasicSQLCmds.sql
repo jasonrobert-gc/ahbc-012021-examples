@@ -34,6 +34,31 @@
 -- DELETE FROM dbo.Students
 -- WHERE StudentId = 2
 
-SELECT * -- FirstName
+-- SELECT * -- FirstName
+-- FROM dbo.Students
+-- WHERE StudentId IN (1, 2)
+-- ORDER BY LastName DESC;
+
+CREATE TABLE dbo.Students
+(
+    StudentId INT PRIMARY KEY IDENTITY(1, 1),
+    FirstName NVARCHAR(200) NOT NULL,
+    LastName NVARCHAR(200) NOT NULL,
+    MiddleName NVARCHAR(200) NULL
+);
+
+INSERT INTO dbo.Students 
+(
+    FirstName,
+    LastName,
+    MiddleName
+)
+VALUES
+(
+    'Jason',
+    'Robert',
+    NULL
+);
+
+SELECT *
 FROM dbo.Students
-WHERE StudentId = 1
