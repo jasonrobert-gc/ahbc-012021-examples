@@ -80,3 +80,34 @@ WHERE SSN = (
     FROM dbo.Employee
     ORDER BY DOB ASC
 )
+
+SELECT *
+FROM dbo.Employee
+WHERE Phone LIKE '313%'
+
+SELECT *
+FROM dbo.Employee
+WHERE DOB < '9/9/1999'
+
+UPDATE dbo.Employee
+SET Phone = NULL
+WHERE DOB > '12/31/2000'
+
+SELECT *
+FROM Employee
+WHERE Phone IS NULL
+
+SELECT 
+  E.FirstName,
+  E.LastName,
+  D.Name,
+  D.[Location]
+FROM dbo.Employee AS E
+INNER JOIN dbo.Department AS D
+    ON E.DepartmentId = D.Id
+ 
+DELETE FROM dbo.Department
+DELETE FROM dbo.Employee
+
+DROP TABLE dbo.Department
+DROP TABLE dbo.Employee
