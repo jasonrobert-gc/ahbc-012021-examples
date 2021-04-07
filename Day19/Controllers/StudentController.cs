@@ -27,6 +27,11 @@ namespace Day19.Controllers
         [HttpPost]
         public IActionResult Create(StudentViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             _repository.Save(model);
             return RedirectToAction("Index");
         }
