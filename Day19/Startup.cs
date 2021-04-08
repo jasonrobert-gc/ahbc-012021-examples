@@ -26,6 +26,8 @@ namespace Day19
         {
             services.AddControllersWithViews();
             services.AddSingleton<IStudentRepository, StudentListRepository>();
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +49,8 @@ namespace Day19
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

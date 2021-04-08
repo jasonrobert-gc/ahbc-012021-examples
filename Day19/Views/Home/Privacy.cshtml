@@ -1,6 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@using Microsoft.AspNetCore.Http
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<h2>View Data</h2>
+<p>The current time is @ViewData["CurrentTime"]</p>
+
+<h2>Temp Data</h2>
+<p>The current time is @TempData["CurrentTime"]</p>
+
+<h2>Session</h2>
+<p>The current time is @Context.Session.GetString("CurrentTime")</p>
+
+<h2>Cookie</h2>
+<p>The current time is @Context.Request.Cookies["CurrentTime"]</p>
