@@ -5,6 +5,8 @@ namespace Day19.Models
 {
     public class StudentViewModel
     {
+        public int StudentId { get; set; }
+
         [Display(Name = "First Name")]
         [Required]
         [StringLength(200, MinimumLength = 2)]
