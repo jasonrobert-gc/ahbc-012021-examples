@@ -1,4 +1,5 @@
 ﻿using Day20b.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -20,7 +21,20 @@ namespace Day20b.Controllers
 
         public IActionResult Index()
         {
+            ViewData["User"] = HttpContext.Session.GetString("User");
             return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(LoginViewModel model)
+        {
+            HttpContext.Session.SetString("User", model.UserName);
+            return RedirectToAction("Index");
         }
 
         public IActionResult Privacy()
