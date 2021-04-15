@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day20_ExerciseJS", "Day20_E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day21", "Day21\Day21.csproj", "{75A246F1-A627-43D2-A00D-2C8833007975}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day21_DependencyInjection", "Day21_DependencyInjection\Day21_DependencyInjection.csproj", "{6E434BA8-DA07-4934-B40E-8A73FC811B49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{75A246F1-A627-43D2-A00D-2C8833007975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75A246F1-A627-43D2-A00D-2C8833007975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75A246F1-A627-43D2-A00D-2C8833007975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E434BA8-DA07-4934-B40E-8A73FC811B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E434BA8-DA07-4934-B40E-8A73FC811B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E434BA8-DA07-4934-B40E-8A73FC811B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E434BA8-DA07-4934-B40E-8A73FC811B49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
