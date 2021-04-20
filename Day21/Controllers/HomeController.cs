@@ -48,11 +48,7 @@ namespace Day21.Controllers
                 });
             }
 
-            return View("BadCookies", new CookieSelectionViewModel
-            {
-                Type = model.Type,
-                Flavor = "gross"
-            });
+            return View("BadCookies");
         }
 
         public IActionResult Privacy()
