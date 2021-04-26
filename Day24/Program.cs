@@ -21,7 +21,7 @@ namespace Day24
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<TourDbContext>();
-                context.Database.EnsureCreated();
+                DbInitializer.Initialize(context);
             }
 
             host.Run();
