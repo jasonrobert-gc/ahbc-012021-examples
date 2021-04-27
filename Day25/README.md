@@ -25,7 +25,7 @@ VALUES ('China', 'Asia'),
 
 ## 2. Setup your Project and Scaffold
 
-From the `Package Manager Console` (Windows) or `Termial` (Mac)
+From the `Package Manager Console` (Windows) or `Termial` (Mac).  Make sure your **Default Project** is set to your project.
 
 ```
 dotnet user-secrets set ConnectionStrings:Countries "Server=localhost;Database=Day25;User=sa;Password=Password.;"
