@@ -24,8 +24,10 @@ VALUES ('China', 'Asia'),
 ```
 
 ## 2. Setup your Project and Scaffold
-```
 
+From the `Package Manager Console` (Windows) `Termial` (Mac)
+
+```
 dotnet user-secrets set ConnectionStrings:Countries "Server=localhost;Database=Day25;User=sa;Password=Password.;"
 dotnet add package Microsoft.EntityFrameworkCore.Design -v 3.1.14
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 3.1.14
