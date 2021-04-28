@@ -4,10 +4,9 @@
     1. [Setup your Project and Scaffold](#scaffold)
     1. [Update your Startup.cs ](#startup)
 1. [Code First Approach](#code-first)
+    1. [Setup your Project](#setup)
     1. [Create your Models](#models)
-    1. [Add EF Nuget Package](#nuget)
     1. [Create your DB Context](#dbcontext)
-    1. [Add your connection string](connection-string)
     1. [Update your Startup.cs ](#startup-cf)
     1. [Update your Program.cs ](#program)
 
@@ -58,7 +57,16 @@ services.AddDbContext<Day25Context>(options =>
 
 ## Code First Approach
 
-### 1. Create your Models <a name="models"></a>
+### 1. Setup your Project <a name="setup"></a>
+
+From the `Package Manager Console` (Windows) or `Termial` (Mac).  Make sure your **Default Project** is set to your project.
+
+```
+dotnet user-secrets set ConnectionStrings:Countries "Server=localhost;Database=Countries;User=sa;Password=Password.;"
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 3.1.14
+```
+
+### 2. Create your Models <a name="models"></a>
 
 In this step, you will be creating your model classes.  These classes represent logical entities ("tables" in SQL Server).  They are nothing more than C# classes with properties.  These classes may also be referred to as POCOs (Plain Old CLR Objects). 
 
@@ -71,20 +79,6 @@ public class Country
     public string Name { get; set; }
     public string Continent { get; set; }
 }
-```
-
-### 2. Add EF Nuget Package <a name="nuget"></a>
-
-We need to add a reference to the `Microsoft.EntityFrameworkCore.SqlServer` nuget package.  There are a couple of ways to accomplish this.
-
-1. [dotnet CLI](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
-2. [Visual Studio Package Manager (Windows)](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio)
-3. [Visual Studio Package Manager (Mac)](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
-
-To be consistent with the [Database First](#database-first) example, we will use the dotnet CLI (option 1 above) in the **Package Manager Console**.
-
-```
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 3.1.14
 ```
 
 ### 3. Create your DB Context <a name="dbcontext"></a>
@@ -103,15 +97,7 @@ public partial class CountriesContext : DbContext
 }
 ```
 
-### 4. Add your connection string <a name="connection-string"></a>
-
-You never want to check your connection string into GIT.  This [article](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=windows) explains how entries can be added from the commandline.  You can also right-click your project and select **Manage User Secrets**. To be consistent with the [Database First](#database-first) example, we will use the dotnet CLI in the **Package Manager Console**.
-
-```
-dotnet user-secrets set ConnectionStrings:Countries "Server=localhost;Database=Countries;User=sa;Password=Password.;"
-```
-
-### 5. Update your Startup.cs <a name="startup-cf"></a>
+### 4. Update your Startup.cs <a name="startup-cf"></a>
 
 ```
 services.AddDbContext<CountriesContext>(options =>
@@ -120,7 +106,7 @@ services.AddDbContext<CountriesContext>(options =>
 });
 ```
 
-### 6. Update your Program.cs <a name="program"></a>
+### 5. Update your Program.cs <a name="program"></a>
 
 Since entity framework is responsible for our database, we need to explicitly tell it to create it.  We want this to happen _before_ our application starts so, we need to add the following code to our `Program.cs` file.
 
