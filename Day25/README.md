@@ -40,6 +40,7 @@ VALUES ('China', 'Asia'),
 From the `Package Manager Console` (Windows) or `Termial` (Mac).  Make sure your **Default Project** is set to your project.
 
 ```
+dotnet user-secrets init
 dotnet user-secrets set ConnectionStrings:Countries "Server=localhost;Database=Day25;User=sa;Password=Password.;"
 dotnet add package Microsoft.EntityFrameworkCore.Design -v 3.1.14
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 3.1.14
