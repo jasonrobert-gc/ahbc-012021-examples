@@ -59,7 +59,7 @@ namespace Day27.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Quantity")] ShoppingListItem shoppingListItem)
+        public async Task<IActionResult> Create(ShoppingListItem shoppingListItem)
         {
             if (ModelState.IsValid)
             {
