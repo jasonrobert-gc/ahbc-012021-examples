@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace Day29.Data
 {
@@ -9,7 +10,7 @@ namespace Day29.Data
 
         [PersonalData]
         public string FirstName { get; set; }
-        
+
         [PersonalData]
         public string LastName { get; set; }
     }
