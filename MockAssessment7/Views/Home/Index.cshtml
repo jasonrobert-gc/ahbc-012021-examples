@@ -1,0 +1,15 @@
+﻿@model MockAssessment7.Models.DonutSearchViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Donuts</h1>
+    <p>Get your donuts</p>
+    <form asp-controller="Home" asp-action="Search">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </form>
+</div>
