@@ -1,0 +1,6 @@
+{
+  "name": "giraffe",
+  "ref": "https://gc-zoo.surge.sh/api/species/giraffe.json",
+  "diet": "Acacia",
+  "habitat": "savanna, grassland, woodland"
+}
